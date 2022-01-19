@@ -41,6 +41,51 @@ console.log("Hallo " + firstName + "!");
 }
 //Die Variable firstName ist NUR innerhalb der Funktion gültig (scope)//
 
+//                  FUNKTIONEN 02b                         //
+console.log("-----------------2b Parametrisierung + Datenübergabe von Außen----------------");
 
+// 
 
+//Lösung Sebastian Plag
 
+// function ausgabeNamenParam(firstName) {
+
+// console.log("Hallo " + firstName + "!");
+
+//     if (firstName=== ""){   //strict equality === es wird auf Inhalt UND Datentyp verglichen
+
+//         console.log("Keine Eingabe");
+
+//     } else{
+
+//         console.log("Hallo " + firstName + "!");
+
+//     }
+
+   
+
+// }
+       
+
+// ausgabeNamenParam("Riccardo");  //Argumente (args) = "Riccardo" - Daten für Parameter
+// ausgabeNamenParam("Anna");
+// ausgabeNamenParam(prompt("Name?:")); //Usereingabe des Arguments für die Funktion ausgabeNamenParam)
+
+// Lösung Peter Schmidt
+
+function ausgabeNamenParam(firstName) {
+    // Konditionen für die Entscheidungsstruktur wird erstellt
+    const cond1 = (firstName == "");
+    const cond2 = (firstName == undefined);
+
+    if (cond1 || cond2) { //cond1 || (ODER) cond1 sind TRUE = firstName wird in "nobody geändert"
+        firstName = "nobody";
+    }
+
+    console.log("Hallo " + firstName + "!");
+
+}
+
+ausgabeNamenParam("Riccardo");  //Argumente (args) = "Riccardo" - Daten für Parameter
+ausgabeNamenParam("Anna");
+ausgabeNamenParam(prompt("Name?:")); //Usereingabe des Arguments für die Funktion ausgabeNamenParam)
