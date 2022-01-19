@@ -73,19 +73,32 @@ console.log("-----------------2b Parametrisierung + Datenübergabe von Außen---
 
 // Lösung Peter Schmidt
 
-function ausgabeNamenParam(firstName) {
-    // Konditionen für die Entscheidungsstruktur wird erstellt
-    const cond1 = (firstName == "");
-    const cond2 = (firstName == undefined);
+// function ausgabeNamenParam(firstName) {
+    // Konditionen für die Entscheidungsstruktur (Conrol Flow) wird erstellt
+//     const cond1 = (firstName == "");
+//     const cond2 = (firstName == undefined);
 
-    if (cond1 || cond2) { //cond1 || (ODER) cond1 sind TRUE = firstName wird in "nobody geändert"
-        firstName = "nobody";
-    }
+//     if (cond1 || cond2) { //cond1 || (ODER) cond1 sind TRUE = firstName wird in "nobody geändert"
+//         firstName = "nobody";
+//     }
 
-    console.log("Hallo " + firstName + "!");
+//     console.log("Hallo " + firstName + "!");
+
+// }
+
+// ausgabeNamenParam("Riccardo");  //Argumente (args) = "Riccardo" - Daten für Parameter
+// ausgabeNamenParam("Anna");
+// ausgabeNamenParam(prompt("Name?:")); //Usereingabe des Arguments für die Funktion ausgabeNamenParam)
+
+
+//                    mehrere Parameter              //
+// 2c mehrere Parameter//
+
+function ausgabeNamenParams(firstName, lastName) 
+{
+    console.log("Hallo " + firstName + " " + lastName + " !");
 
 }
+ausgabeNamenParams("Maxine", "Mütze"); 
 
-ausgabeNamenParam("Riccardo");  //Argumente (args) = "Riccardo" - Daten für Parameter
-ausgabeNamenParam("Anna");
-ausgabeNamenParam(prompt("Name?:")); //Usereingabe des Arguments für die Funktion ausgabeNamenParam)
+ausgabeNamenParams(prompt("Vorname"),prompt("Nachname"));
