@@ -94,11 +94,51 @@ console.log("-----------------2b Parametrisierung + Datenübergabe von Außen---
 //                    mehrere Parameter              //
 // 2c mehrere Parameter//
 
-function ausgabeNamenParams(firstName, lastName) 
+// function ausgabeNamenParams(firstName, lastName) 
+// {
+//     console.log("Hallo " + firstName + " " + lastName + " !"); //String composing (zusammensetzen)
+
+// }
+// ausgabeNamenParams("Maxine", "Mütze"); 
+
+// ausgabeNamenParams(prompt("Vorname"),prompt("Nachname"));
+
+//           FUNKTIONEN 03a             //
+// 03a Vorbereitung //
+//---------one function = one job (uncle Bob)----------------//
+//SRP single responsible principle
+
+
+function ausgabeNamenParams2(firstName, lastName) 
 {
-    console.log("Hallo " + firstName + " " + lastName + " !");
+    // 1. Funktionalität : string composing
+    const gap = " ";
+    const outputStr = "Hallo" + gap + firstName + gap + lastName + "!" 
+    // 2. Funktionalität: data output
+    console.log(outputStr);
 
 }
-ausgabeNamenParams("Maxine", "Mütze"); 
 
-ausgabeNamenParams(prompt("Vorname"),prompt("Nachname"));
+
+// ausgabeNamenParams2("Maxine","Matze");
+
+// Funktionen 03b//
+
+//trennen der einzelnen Funktionen
+
+//1. Funktionalität: String composing
+output(getString("Maxine", "Mützke"))
+
+function getString(firstName, lastName) {
+    const gap = " ";
+    const outputStr = "Hallo" + gap + firstName + gap + lastName + "!"   
+    return outputStr; //Daten werden zum Call geschickt 
+    console.log("Hi");
+}
+
+// 2. Funktionalität: Data output
+// ausgabe("Hallo");
+function output(outputData) {
+        console.log(outputData);
+}
+
